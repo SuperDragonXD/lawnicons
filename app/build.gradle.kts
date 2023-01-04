@@ -10,6 +10,19 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
 }
 
+final def buildCommit = providers.exec {
+    commandLine('git', 'rev-parse', '--short=7', 'HEAD')
+}.standardOutput.asText.get().trim()
+
+final def ciBuild = System.getenv("CI") == "true"
+final def ciRef = System.getenv("GITHUB_REF") ?: ""
+final def ciRunNumber = System.getenv("GITHUB_RUN_NUMBER") ?: ""
+final def isReleaseBuild = ciBuild && ciRef.contains("main")
+final def devReleaseName = ciBuild ? "Dev (#${ciRunNumber})" : "Dev (${buildCommit})"
+
+final def releaseName = "1.3.0"
+final def versionDisplayName = "${isReleaseBuild ? releaseName : devReleaseName}"
+
 android {
     compileSdk = 33
     namespace = "app.lawnchair.lawnicons"
@@ -19,7 +32,7 @@ android {
         minSdk = 26
         targetSdk = 31
         versionCode = 3
-        versionName = "1.2.0"
+        versionName = "${versionDisplayName}"
         vectorDrawables.useSupportLibrary = true
     }
 
