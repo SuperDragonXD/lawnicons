@@ -10,18 +10,18 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
 }
 
-final def buildCommit = providers.exec {
-    commandLine('git', 'rev-parse', '--short=7', 'HEAD')
+val buildCommit = providers.exec {
+    commandLine("git", "rev-parse", "--short=7", "HEAD")
 }.standardOutput.asText.get().trim()
 
-final def ciBuild = System.getenv("CI") == "true"
-final def ciRef = System.getenv("GITHUB_REF") ?: ""
-final def ciRunNumber = System.getenv("GITHUB_RUN_NUMBER") ?: ""
-final def isReleaseBuild = ciBuild && ciRef.contains("main")
-final def devReleaseName = ciBuild ? "Dev (#${ciRunNumber})" : "Dev (${buildCommit})"
+val ciBuild = System.getenv("CI") == "true"
+val ciRef = System.getenv("GITHUB_REF") ?: ""
+val ciRunNumber = System.getenv("GITHUB_RUN_NUMBER") ?: ""
+val isReleaseBuild = ciBuild && ciRef == "main"
+val devReleaseName = ciBuild ? "Dev (#$ciRunNumber)" : "Dev ($buildCommit)"
 
-final def releaseName = "1.3.0"
-final def versionDisplayName = "${isReleaseBuild ? releaseName : devReleaseName}"
+val releaseName = "1.3.0"
+val versionDisplayName = "${isReleaseBuild ? releaseName : devReleaseName}"
 
 android {
     compileSdk = 33
@@ -32,7 +32,7 @@ android {
         minSdk = 26
         targetSdk = 31
         versionCode = 3
-        versionName = "${versionDisplayName}"
+        versionName = "$versionDisplayName"
         vectorDrawables.useSupportLibrary = true
     }
 
