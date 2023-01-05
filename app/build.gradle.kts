@@ -18,10 +18,10 @@ val ciBuild = System.getenv("CI") == "true"
 val ciRef = System.getenv("GITHUB_REF") ?: ""
 val ciRunNumber = System.getenv("GITHUB_RUN_NUMBER") ?: ""
 val isReleaseBuild = ciBuild && ciRef == "main"
-val devReleaseName = if (ciBuild) { "Dev #$ciRunNumber" } else { "$buildCommit" }
+val devReleaseName = if (ciBuild) { "(Dev #$ciRunNumber)" } else { "($buildCommit)" }
 
-val releaseName = "1.3.0"
-val versionDisplayName = "$releaseName (${if (isReleaseBuild) { releaseName } else { devReleaseName }})"
+val version = "1.2.0"
+val versionDisplayName = "$version ${if (!isReleaseBuild) {devReleaseName }}"
 
 android {
     compileSdk = 33
