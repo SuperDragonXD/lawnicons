@@ -15,7 +15,7 @@ val buildCommit = providers.exec {
 }.standardOutput.asText.get().trim()
 
 val ciBuild = System.getenv("CI") == "true"
-val ciRef = System.getenv("GITHUB_REF").orEmpty()
+val ciRef = System.getenv("GITHUB_HEAD_REF").orEmpty()
 val ciRunNumber = System.getenv("GITHUB_RUN_NUMBER").orEmpty()
 val isReleaseBuild = ciBuild && ciRef == "main"
 val devReleaseName = if (ciBuild) "(Dev #$ciRunNumber)" else "($buildCommit)"
