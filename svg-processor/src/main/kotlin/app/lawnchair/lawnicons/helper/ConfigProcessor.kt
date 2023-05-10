@@ -2,7 +2,7 @@ package app.lawnchair.lawnicons.helper
 
 import java.util.Locale
 import org.dom4j.Document
-import org.dom4j.dom.DOMElement
+import org.dom4j.dom.DOMElement.hasAttribute
 import org.dom4j.tree.DefaultDocument
 
 object ConfigProcessor {
