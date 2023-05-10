@@ -2,7 +2,6 @@ package app.lawnchair.lawnicons.helper
 
 import java.util.Locale
 import org.dom4j.Document
-import org.dom4j.dom.DOMElement.hasAttribute
 import org.dom4j.tree.DefaultDocument
 
 object ConfigProcessor {
@@ -46,7 +45,7 @@ object ConfigProcessor {
             val drawable = element.attribute(DRAWABLE).value
             val name = element.attribute(NAME).value
             val ignore = element.attribute(DRAWABLEIGNORE).value
-            if (element.hasAttribute(ignore)) {continue}
+            if (ignore.isEmpty()) {continue}
 
             if (componentInfo.startsWith(componentStart) && componentInfo.endsWith(componentEnd)) {
                 val component = componentInfo.substring(
