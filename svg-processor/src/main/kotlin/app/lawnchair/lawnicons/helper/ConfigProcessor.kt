@@ -44,8 +44,8 @@ object ConfigProcessor {
             val componentInfo = element.attribute(COMPONENT).value
             val drawable = element.attribute(DRAWABLE).value
             val name = element.attribute(NAME).value
-            val shouldIgnore = element.hasAttribute(DRAWABLEIGNORE)
-            if (shouldIgnore) continue
+            val shouldIgnore: String? = element.attributeValue(DRAWABLEIGNORE)
+            if (shouldIgnore != null) continue
 
             if (componentInfo.startsWith(componentStart) && componentInfo.endsWith(componentEnd)) {
                 val component = componentInfo.substring(
