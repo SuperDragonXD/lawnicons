@@ -10,6 +10,7 @@ object ConfigProcessor {
     private const val COMPONENT = "component"
     private const val PACKAGE = "package"
     private const val DRAWABLE = "drawable"
+    private const val DRAWABLEIGNORE = "drawableignore"
     private const val ICONS = "icons"
     private const val ICON = "icon"
     private const val RESOURCES = "resources"
