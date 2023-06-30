@@ -1,6 +1,7 @@
 name: first-interaction
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [develop]
 
