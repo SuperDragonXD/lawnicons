@@ -49,6 +49,23 @@
   <item drawableIgnore="true" component="ComponentInfo{com.nhn.android.calendar/com.nhn.android.calendar.feature.main.base.ui.MainActivity}" drawable="themed_icon_calendar_31" name="네이버 캘린더 ~~ Naver Calendar" />
   <item drawableIgnore="true" component="ComponentInfo{com.android.calendar.go/com.android.calendar.go.homepage.AllInOneActivity}" drawable="themed_icon_calendar_31" name="Calendar" />
   <item drawableIgnore="true" component="ComponentInfo{com.asus.calendar/com.android.calendar.AllInOneActivity}" drawable="themed_icon_calendar_31" name="ASUS Calendar" />
+<!-- Review Bot Test Icons -->
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.AbstractIconOversizedActivity}" drawable="abstract_icon_oversized" name="Test: abstract_icon_oversized" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.AbstractIconPassActivity}" drawable="abstract_icon_pass" name="Test: abstract_icon_pass" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.AbstractIconUndersizedActivity}" drawable="abstract_icon_undersized" name="Test: abstract_icon_undersized" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.CanvasSize191x192Activity}" drawable="canvas_size_191x192" name="Test: canvas_size_191x192" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.CanvasSize192_5x192_5Activity}" drawable="canvas_size_192_5x192_5" name="Test: canvas_size_192_5x192_5" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.CanvasSize192x193Activity}" drawable="canvas_size_192x193" name="Test: canvas_size_192x193" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.ColorBlueActivity}" drawable="color_blue" name="Test: color_blue" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.ColorOpacity70Activity}" drawable="color_opacity_70" name="Test: color_opacity_70" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.ColorShadowActivity}" drawable="color_shadow" name="Test: color_shadow" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.SquareIconOversizedActivity}" drawable="square_icon_oversized" name="Test: square_icon_oversized" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.SquareIconPassActivity}" drawable="square_icon_pass" name="Test: square_icon_pass" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.SquareIconUndersizedActivity}" drawable="square_icon_undersized" name="Test: square_icon_undersized" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.StrokeWeightsAllowable14_6Activity}" drawable="stroke_weights_allowable_14_6" name="Test: stroke_weights_allowable_14_6" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.StrokeWeightsFillActivity}" drawable="stroke_weights_fill" name="Test: stroke_weights_fill" />
+<item component="ComponentInfo{app.lawnchair.lawnicons.reviewbot/app.lawnchair.lawnicons.reviewbot.StrokeWeightsWrongActivity}" drawable="stroke_weights_wrong" name="Test: stroke_weights_wrong" />
+
   <!-- Lawnicons -->
   <item component="ComponentInfo{fonts.mono.oneui_2_0/fonts.mono.oneui_2_0.MainActivity}" drawable="mono" name="#mono" />
   <item component="ComponentInfo{fonts.mono.oneui_2_0/fonts.mono.oneui_2_0.MonoInstallerActivity}" drawable="mono" name="#mono" />
